@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#071a2a" />
+    <title>Pelagic | Clare fishing intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">⌁</span><span>pelagic</span></div>
+      <div class="region-tag">CLARE COAST / IRELAND</div>
+      <nav>
+        <a class="active" href="#overview"><span>▦</span> Conditions overview</a>
+        <a href="#map"><span>◎</span> Grounds explorer</a>
+        <a href="#ranking"><span>↗</span> Spot ranking</a>
+        <a href="#method"><span>◌</span> Method & data</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <p>SAFETY FIRST</p>
+        <span>Decision support only.<br />Check local notices and weather.</span>
+      </div>
+    </aside>
+
+    <main>
+      <header>
+        <div>
+          <p class="eyebrow">OPERATIONS DESK <span class="live-dot"></span> LIVE WINDOW</p>
+          <h1>Clare coast <span>fishing outlook</span></h1>
+          <p class="subhead">A practical read on where the water, tide and structure are lining up.</p>
+        </div>
+        <div class="header-controls">
+          <button class="date-control">TODAY · 30 JUL <span>⌄</span></button>
+          <button class="icon-button" aria-label="Notifications">⌁</button>
+          <div class="avatar">RL</div>
+        </div>
+      </header>
+
+      <section class="route-card" aria-label="Departure plan">
+        <div class="route-origin"><span class="origin-dot"></span><div><small>DEPARTURE</small><strong>Kilrush Marina</strong></div></div>
+        <div class="route-line"><i></i><i></i><i></i></div>
+        <div class="route-destination"><span class="target-dot"></span><div><small>BEST WINDOW</small><strong id="window-time">05:40 — 09:20</strong></div></div>
+        <div class="route-divider"></div>
+        <div><small>TIDE</small><strong class="teal">Flooding +1.8m</strong></div>
+        <div><small>SEA STATE</small><strong>0.6m · WSW</strong></div>
+        <button id="routeToggle" class="outline-button">GALWAY ROUTE <span>→</span></button>
+      </section>
+
+      <section id="overview" class="metric-grid">
+        <article class="metric-card tide-card">
+          <div class="card-label"><span class="metric-icon">≋</span> TIDE / KILRUSH</div>
+          <div class="metric-value">+1.8<small>m</small></div>
+          <div class="metric-meta"><span class="up">↑ 0.4m/hr</span> · High 08:16</div>
+          <div class="tide-chart" aria-label="Rising tide chart"><svg viewBox="0 0 300 50" preserveAspectRatio="none"><path d="M0,43 C31,42 35,34 60,34 S93,44 118,39 S148,12 174,10 S217,15 236,23 S270,40 300,12" fill="none" stroke="currentColor" stroke-width="2"/><path d="M0,43 C31,42 35,34 60,34 S93,44 118,39 S148,12 174,10 S217,15 236,23 S270,40 300,12 L300,50 L0,50Z" fill="currentColor" opacity=".08"/></svg></div>
+        </article>
+        <article class="metric-card temp-card">
+          <div class="card-label"><span class="metric-icon">◒</span> SURFACE TEMP</div>
+          <div class="metric-value">15.2<small>°C</small></div>
+          <div class="metric-meta">Seasonal band <span class="pill good">FAVOURABLE</span></div>
+          <div class="temp-gradient"><span></span><span></span><span></span><span></span></div>
+        </article>
+        <article class="metric-card swell-card">
+          <div class="card-label"><span class="metric-icon">≈</span> SWELL / LAHINCH</div>
+          <div class="metric-value">0.6<small>m</small></div>
+          <div class="metric-meta">7s period · WSW 248°</div>
+          <div class="swell-bars"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+        </article>
+        <article class="metric-card score-card">
+          <div class="card-label"><span class="metric-icon">✦</span> TODAY'S INDEX</div>
+          <div class="score-wrap"><div class="score">78</div><div><strong>Strong</strong><span>conditions</span></div></div>
+          <div class="progress"><i style="width:78%"></i></div>
+        </article>
+      </section>
+
+      <section id="map" class="content-grid">
+        <article class="map-panel">
+          <div class="panel-heading"><div><p class="eyebrow">INTELLIGENCE MAP</p><h2>Productive grounds</h2></div><div class="map-actions"><button class="map-layer active">Suitability</button><button class="map-layer">Bathymetry</button></div></div>
+          <div class="map-shell">
+            <svg class="map-art" viewBox="0 0 800 430" role="img" aria-label="Map of County Clare fishing marks">
+              <defs><linearGradient id="water" x1="0" x2="1"><stop stop-color="#e4f1ed"/><stop offset="1" stop-color="#c7e4e0"/></linearGradient><filter id="blur"><feGaussianBlur stdDeviation="9"/></filter></defs>
+              <rect width="800" height="430" fill="url(#water)"/><g opacity=".5" stroke="#6bb1ac" fill="none"><path d="M0 86 Q168 43 300 91 T582 90 T800 74"/><path d="M0 122 Q170 79 293 127 T600 126 T800 111"/><path d="M0 213 Q100 179 219 211 T476 209 T800 190"/><path d="M0 275 Q134 230 271 278 T520 271 T800 247"/><path d="M0 345 Q147 309 295 345 T548 343 T800 322"/></g>
+              <path d="M0 0 H185 Q211 31 241 53 Q260 74 254 94 Q249 121 272 136 Q294 148 282 177 Q269 200 286 223 Q301 244 285 263 Q271 281 303 298 Q322 311 303 336 Q286 355 305 381 Q325 406 311 430 H0Z" fill="#f7f4e9"/>
+              <path d="M340 0 Q377 42 358 75 Q348 99 375 123 Q401 147 383 174 Q368 193 396 213 Q424 231 403 260 Q387 279 421 299 Q445 314 425 341 Q410 366 439 390 Q458 408 454 430 H800 V0Z" fill="#f7f4e9" opacity=".97"/>
+              <g fill="#b4d2cc" opacity=".8"><ellipse cx="252" cy="285" rx="13" ry="6"/><ellipse cx="264" cy="316" rx="9" ry="4"/><ellipse cx="323" cy="183" rx="8" ry="4"/></g>
+              <g class="map-label"><text x="73" y="44">ATLANTIC</text><text x="583" y="112">GALWAY BAY</text><text x="70" y="353">SHANNON ESTUARY</text></g>
+              <g class="spot" data-spot="loop"><circle cx="297" cy="356" r="18"/><circle cx="297" cy="356" r="7"/><text x="314" y="351">LOOP HEAD</text><text class="rank" x="314" y="367">01 · 91</text></g>
+              <g class="spot" data-spot="spanish"><circle cx="282" cy="234" r="16"/><circle cx="282" cy="234" r="6"/><text x="298" y="229">SPANISH POINT</text><text class="rank" x="298" y="245">02 · 87</text></g>
+              <g class="spot" data-spot="lahinch"><circle cx="286" cy="177" r="15"/><circle cx="286" cy="177" r="5"/><text x="302" y="172">LAHINCH REEF</text><text class="rank" x="302" y="188">03 · 84</text></g>
+              <g class="spot muted" data-spot="doolin"><circle cx="294" cy="100" r="12"/><circle cx="294" cy="100" r="4"/><text x="309" y="95">DOOLIN LEDGES</text><text class="rank" x="309" y="111">04 · 76</text></g>
+              <g class="spot muted" data-spot="black"><circle cx="369" cy="85" r="12"/><circle cx="369" cy="85" r="4"/><text x="384" y="80">BLACK HEAD</text><text class="rank" x="384" y="96">05 · 72</text></g>
+            </svg>
+            <div class="map-legend"><span><i class="legend-dot hot"></i> High opportunity</span><span><i class="legend-dot"></i> Monitored mark</span></div>
+          </div>
+        </article>
+
+        <article class="spot-detail" id="spotDetail">
+          <div class="spot-detail-top"><div><p class="eyebrow">SELECTED MARK</p><h2 id="spotName">Loop Head</h2><p id="spotType">Tide race · rock / mixed ground</p></div><div class="mini-score" id="spotScore">91</div></div>
+          <div class="species-row"><span>BEST FOR</span><div id="speciesTags"><b>Mackerel</b><b>Bass</b><b>Pollack</b></div></div>
+          <div class="depth-read"><span>INFOMAR DEPTH</span><strong id="spotDepth">12–28m</strong><small id="spotBottom">Fast slope, hard bottom</small></div>
+          <div class="signal-list">
+            <div><i class="signal good"></i><span>Temperature edge</span><strong id="tempSignal">+16</strong></div>
+            <div><i class="signal good"></i><span>Tide alignment</span><strong id="tideSignal">+24</strong></div>
+            <div><i class="signal"></i><span>Sea state</span><strong id="swellSignal">+18</strong></div>
+            <div><i class="signal muted-signal"></i><span>Access & safety</span><strong id="accessSignal">+14</strong></div>
+          </div>
+          <button class="full-button">OPEN MARK BRIEF <span>↗</span></button>
+        </article>
+      </section>
+
+      <section class="lower-grid">
+        <article class="profile-panel">
+          <div class="panel-heading"><div><p class="eyebrow">WATER COLUMN</p><h2>Temperature by depth</h2></div><button class="compact-select">LOOP HEAD ⌄</button></div>
+          <div class="profile-content"><div class="profile-graphic"><div class="profile-line"></div><span class="p1">15.2°</span><span class="p2">14.7°</span><span class="p3">13.9°</span><span class="p4">12.8°</span><span class="p5">11.7°</span></div><div class="depth-axis"><span>0m <em>Surface</em></span><span>5m <em>Active feed zone</em></span><span>12m <em>Bass / mackerel band</em></span><span>20m <em>Thermocline</em></span><span>30m <em>Bottom water</em></span></div><div class="interpretation"><span class="interpret-icon">✦</span><p><strong>Read:</strong> A gentle 1.3°C drop through 12m keeps bait elevated. Work metal and soft plastics through <b>5–14m</b> on the flood.</p></div></div>
+        </article>
+        <article id="ranking" class="ranking-panel">
+          <div class="panel-heading"><div><p class="eyebrow">OPPORTUNITY QUEUE</p><h2>Ranked for this window</h2></div><a href="#method">How scored →</a></div>
+          <div class="ranking-list" id="rankingList"></div>
+        </article>
+      </section>
+
+      <section id="method" class="method-bar"><div><span class="method-icon">◇</span><strong>Transparent spot score</strong><p>40% tide & current · 25% temperature band · 20% swell / wind · 15% habitat & access</p></div><div class="source-note"><span>DATA LINEAGE</span><p>Bathymetry & seabed context: <a href="https://www.infomar.ie/data" target="_blank" rel="noreferrer">INFOMAR Open Data</a> (CC BY 4.0). Conditions shown as a planning dashboard; confirm on the water.</p></div></section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
