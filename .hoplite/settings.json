@@ -7,11 +7,11 @@
 	"scripts": {
 		"setup": {
 			"enabled": true,
-			"command": "node --version"
+			"command": "npm install"
 		},
 		"run": {
 			"enabled": true,
-			"command": "python3 -m http.server 3000"
+			"command": "npm run dev"
 		},
 		"archive": {
 			"enabled": true,
